@@ -1,7 +1,7 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#b9828f">
 <title>Flavinha Esmalteria</title>
@@ -11,19 +11,30 @@
 header{background:linear-gradient(135deg,#b9828f,#d9aeb6);color:#fff;padding:22px 18px 18px;position:sticky;top:0;z-index:5}
 h1{font-family:Georgia,serif;margin:0;font-size:25px}.sub{opacity:.9;font-size:13px;margin-top:4px}
 nav{display:flex;background:#fff;border-bottom:1px solid var(--line);position:sticky;top:81px;z-index:4;overflow:auto}
-nav button{border:0;background:none;padding:13px 15px;color:#76565b;font-weight:700;white-space:nowrap}nav button.active{color:var(--rose);border-bottom:3px solid var(--rose)}
+nav button{border:0;background:none;padding:13px 15px;color:#76565b;font-weight:700;white-space:nowrap}
+nav button.active{color:var(--rose);border-bottom:3px solid var(--rose)}
 main{padding:16px;max-width:800px;margin:auto}.page{display:none}.page.active{display:block}
-.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:15px;margin-bottom:14px;box-shadow:0 2px 8px #4d35380b}
-.row{display:flex;gap:9px;align-items:center;justify-content:space-between;flex-wrap:wrap}.btn{background:var(--rose);color:white;border:0;border-radius:10px;padding:11px 14px;font-weight:700}.btn.secondary{background:var(--rose2);color:var(--brown)}
-input,select,textarea{width:100%;padding:11px;border:1px solid #d9cacc;border-radius:9px;background:#fff;color:var(--brown);font-size:15px}label{font-size:12px;font-weight:700;display:block;margin:10px 0 5px}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.small{font-size:12px;color:#806a6d}
-.calendar-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}.dow{text-align:center;font-size:11px;font-weight:bold;padding:5px;color:#87686d}.day{min-height:72px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:5px;font-size:12px;cursor:pointer}.day.other{opacity:.35}.day.today{outline:2px solid var(--rose)}.appt{background:var(--rose2);border-radius:5px;padding:3px;margin-top:3px;font-size:10px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
-.week{display:grid;grid-template-columns:58px repeat(7,1fr);overflow:auto}.wkhead{font-size:11px;text-align:center;padding:7px;border-bottom:1px solid var(--line)}.hour{font-size:10px;padding:8px 3px;border-right:1px solid var(--line);height:52px}.slot{height:52px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);position:relative}.slot .appt{position:absolute;inset:3px;font-size:10px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:15px;margin-bottom:14px;box-shadow:0 2px 8px rgba(77,53,56,.04)}
+.row{display:flex;gap:9px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.btn{background:var(--rose);color:#fff;border:0;border-radius:10px;padding:11px 14px;font-weight:700}.btn.secondary{background:var(--rose2);color:var(--brown)}
+.btn.danger{background:#f4dddd;color:#8c3333}.btn.smallbtn{padding:7px 10px;font-size:12px}
+input,select,textarea{width:100%;padding:11px;border:1px solid #d9cacc;border-radius:9px;background:#fff;color:var(--brown);font-size:15px}
+label{font-size:12px;font-weight:700;display:block;margin:10px 0 5px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.small{font-size:12px;color:#806a6d}.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
+.dow{text-align:center;font-size:11px;font-weight:bold;padding:5px;color:#87686d}
+.day{min-height:72px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:5px;font-size:12px;cursor:pointer}
+.day.other{opacity:.35}.day.today{outline:2px solid var(--rose)}
+.appt{background:var(--rose2);border-radius:5px;padding:3px;margin-top:3px;font-size:10px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;cursor:pointer}
+.appt.cancelled{text-decoration:line-through;opacity:.55}
 .listitem{padding:12px 0;border-bottom:1px solid var(--line)}.listitem:last-child{border-bottom:0}
-.modal{position:fixed;inset:0;background:#0008;display:none;align-items:flex-end;z-index:20}.modal.show{display:flex}.sheet{background:#fff;width:100%;max-height:90vh;overflow:auto;border-radius:20px 20px 0 0;padding:18px}.close{float:right;border:0;background:none;font-size:24px}
-.empty{text-align:center;padding:25px;color:#8b7477}
-.actions{display:flex;gap:7px;margin-top:10px}.danger{color:#a33;border:0;background:none;font-weight:bold}
-@media(min-width:650px){.grid{grid-template-columns:repeat(3,1fr)}.modal{align-items:center}.sheet{max-width:520px;border-radius:20px}}
+.empty{text-align:center;padding:25px;color:#8b7477}.actions{display:flex;gap:7px;margin-top:10px;flex-wrap:wrap}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.533);display:none;align-items:flex-end;z-index:20}.modal.show{display:flex}
+.sheet{background:#fff;width:100%;max-height:92vh;overflow:auto;border-radius:20px 20px 0 0;padding:18px}.close{float:right;border:0;background:none;font-size:24px}
+.proc-row{display:grid;grid-template-columns:1fr 105px 42px;gap:6px;align-items:end;margin-bottom:7px}
+.total{font-size:18px;font-weight:700;text-align:right;margin-top:10px}
+.status{display:inline-block;padding:4px 8px;border-radius:20px;background:var(--rose2);font-size:11px;font-weight:bold}
+.status.cancel{background:#f0dada;color:#8c3333}
+@media(min-width:650px){.grid{grid-template-columns:repeat(3,1fr)}.modal{align-items:center}.sheet{max-width:540px;border-radius:20px}}
 </style>
 </head>
 <body>
@@ -36,16 +47,18 @@ input,select,textarea{width:100%;padding:11px;border:1px solid #d9cacc;border-ra
 <main>
 <section id="agenda" class="page active">
 <div class="card">
-<div class="row"><button class="btn secondary" onclick="changeMonth(-1)">‹</button><strong id="monthTitle"></strong><button class="btn secondary" onclick="changeMonth(1)">›</button></div>
-<div class="row" style="margin-top:12px"><button class="btn secondary" onclick="setToday()">Hoje</button><div><button class="btn secondary" onclick="setView('month')">Mês</button> <button class="btn secondary" onclick="setView('week')">Semana</button> <button class="btn secondary" onclick="setView('day')">Dia</button></div></div>
+<div class="row"><button class="btn secondary" onclick="moveMonth(-1)">‹</button><strong id="monthTitle"></strong><button class="btn secondary" onclick="moveMonth(1)">›</button></div>
+<div class="row" style="margin-top:12px"><button class="btn secondary" onclick="goToday()">Hoje</button><div><button class="btn secondary" onclick="setView('month')">Mês</button> <button class="btn secondary" onclick="setView('week')">Semana</button> <button class="btn secondary" onclick="setView('day')">Dia</button></div></div>
 </div>
 <div id="calendarBox"></div>
 </section>
+
 <section id="clientes" class="page">
 <div class="row"><h2>Clientes</h2><button class="btn" onclick="openClient()">+ Cliente</button></div>
 <div class="card"><input id="clientSearch" placeholder="🔎 Procurar cliente..." oninput="renderClients()"></div>
 <div id="clientList"></div>
 </section>
+
 <section id="servicos" class="page">
 <div class="row"><h2>Serviços</h2><button class="btn" onclick="openService()">+ Serviço</button></div>
 <div id="serviceList"></div>
@@ -55,40 +68,102 @@ input,select,textarea{width:100%;padding:11px;border:1px solid #d9cacc;border-ra
 <div id="modal" class="modal" onclick="if(event.target===this)closeModal()"><div class="sheet"><button class="close" onclick="closeModal()">×</button><div id="modalContent"></div></div></div>
 
 <script>
-const KEY='flavinha_esmalteria_v1';
-let data=JSON.parse(localStorage.getItem(KEY)||'{"clients":[],"services":[],"appointments":[]}');
-let cursor=new Date(), view='month';
-const months=['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
-function save(){localStorage.setItem(KEY,JSON.stringify(data))}
-function esc(s=''){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function pad(n){return String(n).padStart(2,'0')}
-function iso(d){return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())}
-function parse(s){let [y,m,d]=s.split('-').map(Number);return new Date(y,m-1,d)}
-function showPage(id,btn){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('nav button').forEach(x=>x.classList.remove('active'));btn.classList.add('active');if(id==='agenda')renderAgenda();if(id==='clientes')renderClients();if(id==='servicos')renderServices()}
+const KEY='flavinha_esmalteria_v2';
+let data=JSON.parse(localStorage.getItem(KEY)||'null')||{clients:[],services:[],appointments:[]};
+let cursor=new Date(); cursor.setHours(0,0,0,0); let view='month';
+
+const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
+const iso=d=>{let x=new Date(d);return x.getFullYear()+'-'+String(x.getMonth()+1).padStart(2,'0')+'-'+String(x.getDate()).padStart(2,'0')};
+const parse=s=>{let [y,m,d]=s.split('-').map(Number);let x=new Date(y,m-1,d);x.setHours(0,0,0,0);return x};
+const nameClient=id=>(data.clients.find(c=>c.id===id)||{}).name||'Cliente';
+const nameService=id=>(data.services.find(s=>s.id===id)||{}).name||'Serviço';
+const save=()=>localStorage.setItem(KEY,JSON.stringify(data));
+const appts=d=>data.appointments.filter(a=>a.date===iso(d));
+const money=v=>Number(String(v||0).replace(',','.'))||0;
+
+function showPage(id,btn){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('nav button').forEach(x=>x.classList.remove('active'));btn.classList.add('active');if(id==='clientes')renderClients();if(id==='servicos')renderServices();if(id==='agenda')renderAgenda()}
+function moveMonth(n){cursor.setMonth(cursor.getMonth()+n);renderAgenda()}
+function goToday(){cursor=new Date();cursor.setHours(0,0,0,0);view='month';renderAgenda()}
 function setView(v){view=v;renderAgenda()}
-function setToday(){cursor=new Date();renderAgenda()}
-function changeMonth(n){if(view==='day')cursor.setDate(cursor.getDate()+n);else if(view==='week')cursor.setDate(cursor.getDate()+n*7);else cursor.setMonth(cursor.getMonth()+n);renderAgenda()}
-function appts(date){return data.appointments.filter(a=>a.date===iso(date)).sort((a,b)=>a.time.localeCompare(b.time))}
-function nameClient(id){return data.clients.find(c=>c.id===id)?.name||'Cliente removida'}
-function nameService(id){return data.services.find(s=>s.id===id)?.name||'Serviço removido'}
-function renderAgenda(){document.getElementById('monthTitle').textContent= view==='month'?months[cursor.getMonth()]+' '+cursor.getFullYear():view==='week'?'Semana de '+iso(cursor):cursor.toLocaleDateString('pt-BR');let box=document.getElementById('calendarBox');if(view==='month')renderMonth(box);else if(view==='week')renderWeek(box);else renderDay(box)}
-function renderMonth(box){let y=cursor.getFullYear(),m=cursor.getMonth(),first=new Date(y,m,1),start=(first.getDay()+6)%7;let html='<div class="calendar">';['Seg','Ter','Qua','Qui','Sex','Sáb','Dom'].forEach(x=>html+='<div class="dow">'+x+'</div>');for(let i=0;i<42;i++){let d=new Date(y,m,1-start+i), cls=d.getMonth()!==m?'day other':'day';if(iso(d)===iso(new Date()))cls+=' today';html+=`<div class="${cls}" onclick="openAppt('${iso(d)}')"><b>${d.getDate()}</b>`;appts(d).forEach(a=>html+=`<div class="appt">${esc(a.time)} · ${esc(nameClient(a.clientId))}</div>`);html+='</div>'}html+='</div>';box.innerHTML=html}
-function monday(d){let x=new Date(d),n=(x.getDay()+6)%7;x.setDate(x.getDate()-n);return x}
-function renderWeek(box){let start=monday(cursor),html='<div class="week"><div></div>';for(let i=0;i<7;i++){let d=new Date(start);d.setDate(d.getDate()+i);html+=`<div class="wkhead">${['Seg','Ter','Qua','Qui','Sex','Sáb','Dom'][i]}<br>${d.getDate()}/${d.getMonth()+1}</div>`}for(let h=7;h<=21;h++){html+=`<div class="hour">${pad(h)}:00</div>`;for(let i=0;i<7;i++){let d=new Date(start);d.setDate(d.getDate()+i);let aa=appts(d).filter(a=>+a.time.split(':')[0]===h);html+=`<div class="slot" onclick="openAppt('${iso(d)}','${pad(h)}:00')">`;aa.forEach(a=>html+=`<div class="appt">${esc(a.time)} ${esc(nameClient(a.clientId))}</div>`);html+='</div>'}}box.innerHTML=html+'</div>'}
-function renderDay(box){let d=cursor,aa=appts(d),html=`<div class="card"><h3>${d.toLocaleDateString('pt-BR',{weekday:'long',day:'2-digit',month:'long'})}</h3><button class="btn" onclick="openAppt('${iso(d)}')">+ Novo agendamento</button></div>`;html+=aa.length?'<div class="card">'+aa.map(a=>`<div class="listitem"><b>${esc(a.time)}</b> — ${esc(nameClient(a.clientId))}<br><span class="small">${esc(nameService(a.serviceId))} · R$ ${esc(a.value)}</span><div class="actions"><button class="danger" onclick="editAppt('${a.id}')">Editar</button><button class="danger" onclick="delAppt('${a.id}')">Excluir</button></div></div>`).join('')+'</div>':'<div class="empty">Nenhum agendamento neste dia.</div>';box.innerHTML=html}
-function openModal(html){document.getElementById('modalContent').innerHTML=html;document.getElementById('modal').classList.add('show')}
+function renderAgenda(){document.getElementById('monthTitle').textContent=cursor.toLocaleDateString('pt-BR',{month:'long',year:'numeric'});let box=document.getElementById('calendarBox');if(view==='month')renderMonth(box);else if(view==='week')renderWeek(box);else renderDay(box)}
+
+function renderMonth(box){
+ let y=cursor.getFullYear(),m=cursor.getMonth(),first=new Date(y,m,1),start=(first.getDay()+6)%7,days=new Date(y,m+1,0).getDate();
+ let html='<div class="calendar"><div class="dow">Seg</div><div class="dow">Ter</div><div class="dow">Qua</div><div class="dow">Qui</div><div class="dow">Sex</div><div class="dow">Sáb</div><div class="dow">Dom</div>';
+ for(let i=0;i<start;i++){let d=new Date(y,m,i-start+1);html+=`<div class="day other" onclick="openDay('${iso(d)}')"><b>${d.getDate()}</b></div>`}
+ for(let n=1;n<=days;n++){let d=new Date(y,m,n),today=iso(d)===iso(new Date()), aa=appts(d);html+=`<div class="day ${today?'today':''}" onclick="openDay('${iso(d)}')"><b>${n}</b>${aa.map(a=>`<div class="appt ${a.status==='Cancelado'?'cancelled':''}" onclick="event.stopPropagation();editAppt('${a.id}')">${esc(a.time)} · ${esc(nameClient(a.clientId))}</div>`).join('')}</div>`}
+ let total=42-(start+days);for(let i=1;i<=total;i++){let d=new Date(y,m+1,i);html+=`<div class="day other" onclick="openDay('${iso(d)}')"><b>${i}</b></div>`}
+ box.innerHTML=html+'</div>';
+}
+function openDay(s){cursor=parse(s);view='day';renderAgenda()}
+function renderWeek(box){
+ let base=new Date(cursor),day=(base.getDay()+6)%7;base.setDate(base.getDate()-day);
+ let html='<div class="card"><div class="calendar">'+Array.from({length:7},(_,i)=>{let d=new Date(base);d.setDate(base.getDate()+i);return `<div class="dow">${d.toLocaleDateString('pt-BR',{weekday:'short',day:'2-digit'})}</div>`}).join('')+'</div></div><div class="card">';
+ for(let i=0;i<7;i++){let d=new Date(base);d.setDate(base.getDate()+i);let aa=appts(d);html+=`<div class="listitem"><b>${d.toLocaleDateString('pt-BR',{weekday:'long',day:'2-digit',month:'2-digit'})}</b>${aa.length?aa.map(a=>`<div class="appt ${a.status==='Cancelado'?'cancelled':''}" onclick="editAppt('${a.id}')">${esc(a.time)} · ${esc(nameClient(a.clientId))} · ${esc(a.procedures.map(p=>p.name).join(' + '))}</div>`).join(''):'<div class="small">Sem agendamentos</div>'}</div>`}
+ box.innerHTML=html+'</div>';
+}
+function renderDay(box){
+ let d=cursor,aa=appts(d),html=`<div class="card"><h3>${d.toLocaleDateString('pt-BR',{weekday:'long',day:'2-digit',month:'long'})}</h3><button class="btn" onclick="openAppt('${iso(d)}')">+ Novo agendamento</button></div>`;
+ html+=aa.length?'<div class="card">'+aa.map(a=>`<div class="listitem"><b>${esc(a.time)}–${esc(endTimeForRows(a.time,a.procedures||[]))} — ${esc(nameClient(a.clientId))}</b><br><span class="small">${esc(a.procedures.map(p=>p.name).join(' + '))} · R$ ${a.total.toFixed(2).replace('.',',')} · <span class="status ${a.status==='Cancelado'?'cancel':''}">${esc(a.status||'Agendado')}</span></span>${a.obs?'<br><span class="small">'+esc(a.obs)+'</span>':''}<div class="actions"><button class="btn secondary smallbtn" onclick="editAppt('${a.id}')">Editar</button>${a.status==='Cancelado'?`<button class="btn secondary smallbtn" onclick="reactivateAppt('${a.id}')">Reativar</button>`:`<button class="btn danger smallbtn" onclick="cancelAppt('${a.id}')">Cancelar</button>`}</div></div>`).join('')+'</div>':'<div class="empty">Nenhum agendamento neste dia.</div>';
+ box.innerHTML=html;
+}
+
+function openModal(content){document.getElementById('modalContent').innerHTML=content;document.getElementById('modal').classList.add('show')}
 function closeModal(){document.getElementById('modal').classList.remove('show')}
-function openAppt(date,time=''){if(!data.clients.length||!data.services.length){alert('Cadastre pelo menos uma cliente e um serviço antes de agendar.');return}let optsC=data.clients.map(c=>`<option value="${c.id}">${esc(c.name)}</option>`).join(''),optsS=data.services.map(s=>`<option value="${s.id}">${esc(s.name)} — R$ ${esc(s.value)}</option>`).join('');openModal(`<h2>Novo agendamento</h2><label>Cliente</label><select id="aClient">${optsC}</select><label>Serviço</label><select id="aService" onchange="fillValue()">${optsS}</select><label>Data</label><input id="aDate" type="date" value="${date}"><label>Horário</label><input id="aTime" type="time" value="${time}"><label>Valor</label><input id="aValue" type="text"><label>Observação</label><textarea id="aObs" rows="3"></textarea><br><button class="btn" onclick="saveAppt()">Salvar agendamento</button>`);fillValue()}
-function fillValue(){let s=data.services.find(x=>x.id===document.getElementById('aService').value);if(s)document.getElementById('aValue').value=s.value}
-function saveAppt(){let a={id:Date.now().toString(),clientId:aClient.value,serviceId:aService.value,date:aDate.value,time:aTime.value,value:aValue.value,obs:aObs.value};if(!a.date||!a.time){alert('Informe data e horário.');return}data.appointments.push(a);save();closeModal();cursor=parse(a.date);view='day';renderAgenda()}
-function editAppt(id){let a=data.appointments.find(x=>x.id===id);if(!a)return;openAppt(a.date,a.time);setTimeout(()=>{aClient.value=a.clientId;aService.value=a.serviceId;aValue.value=a.value;aObs.value=a.obs;document.querySelector('#modalContent .btn').onclick=()=>{a.clientId=aClient.value;a.serviceId=aService.value;a.date=aDate.value;a.time=aTime.value;a.value=aValue.value;a.obs=aObs.value;save();closeModal();cursor=parse(a.date);renderAgenda()}},0)}
-function delAppt(id){if(confirm('Excluir este agendamento?')){data.appointments=data.appointments.filter(a=>a.id!==id);save();renderAgenda()}}
-function openClient(id=null){let c=id?data.clients.find(x=>x.id===id):{name:'',phone:'',obs:''};openModal(`<h2>${id?'Editar':'Nova'} cliente</h2><label>Nome</label><input id="cName" value="${esc(c.name)}"><label>WhatsApp / telefone</label><input id="cPhone" value="${esc(c.phone)}"><label>Observações</label><textarea id="cObs" rows="3">${esc(c.obs)}</textarea><br><button class="btn" onclick="saveClient('${id||''}')">Salvar</button>`)}
-function saveClient(id){let c=id?data.clients.find(x=>x.id===id):{id:Date.now().toString()};c.name=cName.value.trim();c.phone=cPhone.value.trim();c.obs=cObs.value;if(!c.name){alert('Informe o nome.');return}if(!id)data.clients.push(c);save();closeModal();renderClients()}
-function renderClients(){let q=(document.getElementById('clientSearch')?.value||'').toLowerCase(),arr=data.clients.filter(c=>c.name.toLowerCase().includes(q));document.getElementById('clientList').innerHTML=arr.length?arr.map(c=>`<div class="card"><div class="row"><div><b>${esc(c.name)}</b><br><span class="small">${esc(c.phone||'Sem telefone')}</span></div><button class="btn secondary" onclick="openClient('${c.id}')">Editar</button></div>${c.obs?'<p class="small">'+esc(c.obs)+'</p>':''}</div>`).join(''):'<div class="empty">Nenhuma cliente cadastrada.</div>'}
-function openService(id=null){let s=id?data.services.find(x=>x.id===id):{name:'',duration:'',value:''};openModal(`<h2>${id?'Editar':'Novo'} serviço</h2><label>Nome do serviço</label><input id="sName" value="${esc(s.name)}"><label>Duração</label><input id="sDuration" placeholder="Ex.: 1h30" value="${esc(s.duration)}"><label>Valor (R$)</label><input id="sValue" inputmode="decimal" value="${esc(s.value)}"><br><button class="btn" onclick="saveService('${id||''}')">Salvar</button>`)}
-function saveService(id){let s=id?data.services.find(x=>x.id===id):{id:Date.now().toString()};s.name=sName.value.trim();s.duration=sDuration.value.trim();s.value=sValue.value.trim();if(!s.name){alert('Informe o serviço.');return}if(!id)data.services.push(s);save();closeModal();renderServices()}
-function renderServices(){document.getElementById('serviceList').innerHTML=data.services.length?data.services.map(s=>`<div class="card"><div class="row"><div><b>${esc(s.name)}</b><br><span class="small">${esc(s.duration||'Duração não informada')} · R$ ${esc(s.value||'0,00')}</span></div><button class="btn secondary" onclick="openService('${s.id}')">Editar</button></div></div>`).join(''):'<div class="empty">Cadastre seus serviços.</div>'}
+
+function procedureOptions(selected=[]){return data.services.map(s=>`<option value="${s.id}" ${selected.includes(s.id)?'selected':''}>${esc(s.name)} — R$ ${esc(s.value)}</option>`).join('')}
+function openAppt(date=iso(cursor)){
+ if(!data.clients.length){alert('Cadastre pelo menos uma cliente primeiro.');return}
+ if(!data.services.length){alert('Cadastre pelo menos um serviço primeiro.');return}
+ openModal(`<h2>Novo agendamento</h2><label>Cliente</label><select id="aClient">${data.clients.map(c=>`<option value="${c.id}">${esc(c.name)}</option>`).join('')}</select><label>Data</label><input id="aDate" type="date" value="${date}"><label>Horário</label><input id="aTime" type="time" value="09:00" onchange="showEndTime()"><label>Procedimentos</label><div id="procList"></div><button class="btn secondary" onclick="addProcRow()">+ Adicionar procedimento</button><div class="card" style="margin-top:10px;padding:10px">⏱️ Término previsto: <strong id="aEnd">--:--</strong></div><div class="total">Total: R$ <span id="aTotal">0,00</span></div><label>Observação</label><textarea id="aObs" rows="3" placeholder="Observação opcional"></textarea><div class="actions"><button class="btn" onclick="createAppt()">Salvar agendamento</button></div>`);
+ addProcRow();
+}
+function addProcRow(selected=''){
+ let div=document.createElement('div');div.className='proc-row';div.innerHTML=`<div><select class="procSelect" onchange="updateTotal()">${procedureOptions(selected?[selected]:[])}</select></div><div><input class="procValue" type="text" placeholder="Valor" value=""></div><button class="btn danger smallbtn" onclick="this.parentElement.remove();updateTotal();showEndTime()">×</button>`;
+ document.getElementById('procList').appendChild(div);let s=div.querySelector('.procSelect');let v=div.querySelector('.procValue');v.value=(data.services.find(x=>x.id===s.value)||{}).value||'';updateTotal();showEndTime();
+}
+function updateTotal(){let total=[...document.querySelectorAll('.procValue')].reduce((t,x)=>t+money(x.value),0);document.getElementById('aTotal').textContent=total.toFixed(2).replace('.',',')}
+function durationForRows(rows){return rows.reduce((sum,p)=>{let s=data.services.find(x=>x.id===p.serviceId);return sum+Math.max(5,parseInt((s&&s.duration)||60,10))},0)}
+function timeToMin(t){let [h,m]=t.split(':').map(Number);return h*60+m}
+function minToTime(n){n=((n%1440)+1440)%1440;return String(Math.floor(n/60)).padStart(2,'0')+':'+String(n%60).padStart(2,'0')}
+function overlaps(date,start,duration,ignoreId=''){let a0=timeToMin(start),a1=a0+duration;return data.appointments.filter(a=>a.date===date&&a.id!==ignoreId&&a.status!=='Cancelado').find(a=>{let b0=timeToMin(a.time),b1=b0+durationForRows(a.procedures||[]);return a0<b1&&b0<a1})}
+function endTimeForRows(start,rows){return minToTime(timeToMin(start)+durationForRows(rows))}
+function showEndTime(){let rows=[...document.querySelectorAll('.proc-row')].map(r=>({serviceId:r.querySelector('.procSelect').value})).filter(x=>x.serviceId);let el=document.getElementById('aEnd');if(el&&aTime.value&&rows.length)el.textContent=endTimeForRows(aTime.value,rows);updateTotal()}
+function createAppt(){
+ let rows=[...document.querySelectorAll('.proc-row')].map(r=>({serviceId:r.querySelector('.procSelect').value,name:nameService(r.querySelector('.procSelect').value),value:r.querySelector('.procValue').value})).filter(x=>x.serviceId);
+ if(!aDate.value||!aTime.value||!rows.length){alert('Informe data, horário e pelo menos um procedimento.');return}
+ let total=rows.reduce((t,p)=>t+money(p.value),0);let duration=durationForRows(rows);let conflict=overlaps(aDate.value,aTime.value,duration);if(conflict){let fim=endTimeForRows(conflict.time,conflict.procedures||[]);alert('⚠️ Horário indisponível. Já existe um atendimento das '+conflict.time+' às '+fim+'.');return}
+ data.appointments.push({id:Date.now().toString(),clientId:aClient.value,date:aDate.value,time:aTime.value,procedures:rows,total,status:'Agendado',obs:aObs.value});
+ save();closeModal();cursor=parse(aDate.value);view='day';renderAgenda();
+}
+function editAppt(id){
+ let a=data.appointments.find(x=>x.id===id);if(!a)return;
+ openModal(`<h2>Editar agendamento</h2><label>Cliente</label><select id="aClient">${data.clients.map(c=>`<option value="${c.id}">${esc(c.name)}</option>`).join('')}</select><label>Data</label><input id="aDate" type="date" value="${a.date}"><label>Horário</label><input id="aTime" type="time" value="${a.time}" onchange="showEndTime()"><label>Procedimentos</label><div id="procList"></div><button class="btn secondary" onclick="addProcRow()">+ Adicionar procedimento</button><div class="card" style="margin-top:10px;padding:10px">⏱️ Término previsto: <strong id="aEnd">--:--</strong></div><div class="total">Total: R$ <span id="aTotal">0,00</span></div><label>Status</label><select id="aStatus"><option ${a.status!=='Cancelado'?'selected':''}>Agendado</option><option ${a.status==='Cancelado'?'selected':''}>Cancelado</option></select><label>Observação</label><textarea id="aObs" rows="3">${esc(a.obs||'')}</textarea><div class="actions"><button class="btn" onclick="updateAppt('${id}')">Salvar alterações</button>${a.status==='Cancelado'?`<button class="btn secondary" onclick="reactivateAppt('${id}')">Reativar</button>`:`<button class="btn danger" onclick="cancelAppt('${id}')">Cancelar agendamento</button>`}</div>`);
+ aClient.value=a.clientId;a.procedures.forEach(p=>{addProcRow(p.serviceId);let rows=document.querySelectorAll('.proc-row');rows[rows.length-1].querySelector('.procValue').value=p.value});updateTotal();
+}
+function updateAppt(id){
+ let a=data.appointments.find(x=>x.id===id);if(!a)return;
+ let rows=[...document.querySelectorAll('.proc-row')].map(r=>({serviceId:r.querySelector('.procSelect').value,name:nameService(r.querySelector('.procSelect').value),value:r.querySelector('.procValue').value})).filter(x=>x.serviceId);
+ if(!aDate.value||!aTime.value||!rows.length){alert('Informe data, horário e pelo menos um procedimento.');return}
+ let conflict=overlaps(aDate.value,aTime.value,durationForRows(rows),id);if(conflict){let fim=endTimeForRows(conflict.time,conflict.procedures||[]);alert('⚠️ Horário indisponível. Já existe um atendimento das '+conflict.time+' às '+fim+'.');return}a.clientId=aClient.value;a.date=aDate.value;a.time=aTime.value;a.procedures=rows;a.total=rows.reduce((t,p)=>t+money(p.value),0);a.status=aStatus.value;a.obs=aObs.value;
+ save();closeModal();cursor=parse(a.date);view='day';renderAgenda();
+}
+function cancelAppt(id){let a=data.appointments.find(x=>x.id===id);if(a&&confirm('Cancelar este agendamento?')){a.status='Cancelado';save();closeModal();cursor=parse(a.date);view='day';renderAgenda()}}
+function reactivateAppt(id){let a=data.appointments.find(x=>x.id===id);if(a){a.status='Agendado';save();closeModal();cursor=parse(a.date);view='day';renderAgenda()}}
+
+function openClient(id=''){
+ let c=data.clients.find(x=>x.id===id)||{name:'',phone:'',obs:''};
+ openModal(`<h2>${id?'Editar':'Nova'} cliente</h2><label>Nome</label><input id="cName" value="${esc(c.name)}"><label>Telefone</label><input id="cPhone" value="${esc(c.phone||'')}"><label>Observação</label><textarea id="cObs" rows="3">${esc(c.obs||'')}</textarea><div class="actions"><button class="btn" onclick="saveClient('${id}')">Salvar</button></div>`);
+}
+function saveClient(id){if(!cName.value.trim()){alert('Informe o nome.');return}if(id){let c=data.clients.find(x=>x.id===id);c.name=cName.value.trim();c.phone=cPhone.value;c.obs=cObs.value}else data.clients.push({id:Date.now().toString(),name:cName.value.trim(),phone:cPhone.value,obs:cObs.value});save();closeModal();renderClients()}
+function renderClients(){let q=(document.getElementById('clientSearch')?.value||'').toLowerCase();let arr=data.clients.filter(c=>c.name.toLowerCase().includes(q));document.getElementById('clientList').innerHTML=arr.length?'<div class="card">'+arr.map(c=>`<div class="listitem"><b>${esc(c.name)}</b><br><span class="small">${esc(c.phone||'')}</span><div class="actions"><button class="btn secondary smallbtn" onclick="openClient('${c.id}')">Editar</button><button class="btn smallbtn" onclick="openApptForClient('${c.id}')">Agendar</button></div></div>`).join('')+'</div>':'<div class="empty">Nenhuma cliente cadastrada.</div>'}
+function openApptForClient(id){openAppt(iso(cursor));setTimeout(()=>{if(document.getElementById('aClient'))aClient.value=id},0)}
+
+function openService(id=''){let s=data.services.find(x=>x.id===id)||{name:'',value:'',duration:60};openModal(`<h2>${id?'Editar':'Novo'} serviço</h2><label>Nome do serviço</label><input id="sName" value="${esc(s.name)}"><label>Duração (minutos)</label><input id="sDuration" type="number" min="5" step="5" value="${esc(s.duration||60)}"><label>Valor</label><input id="sValue" value="${esc(s.value)}"><div class="actions"><button class="btn" onclick="saveService('${id}')">Salvar</button></div>`)}
+function saveService(id){if(!sName.value.trim()){alert('Informe o nome.');return}let duration=Math.max(5,parseInt(sDuration.value||60,10));if(id){let s=data.services.find(x=>x.id===id);s.name=sName.value.trim();s.value=sValue.value;s.duration=duration}else data.services.push({id:Date.now().toString(),name:sName.value.trim(),value:sValue.value,duration});save();closeModal();renderServices()}
+function renderServices(){document.getElementById('serviceList').innerHTML=data.services.length?'<div class="card">'+data.services.map(s=>`<div class="listitem"><b>${esc(s.name)}</b> — R$ ${esc(s.value||'0,00')}<br><span class="small">⏱️ ${esc(s.duration||60)} minutos</span><div class="actions"><button class="btn secondary smallbtn" onclick="openService('${s.id}')">Editar</button></div></div>`).join('')+'</div>':'<div class="empty">Cadastre seus serviços.</div>'}
+
 renderAgenda();renderClients();renderServices();
 </script>
-</body></html>
+</body>
+</html>
